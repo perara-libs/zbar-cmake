@@ -120,7 +120,7 @@ include(CheckIncludeFiles)
 
 CHECK_INCLUDE_FILE(sys/types.h HAVE_SYS_TYPES_H)
 CHECK_INCLUDE_FILE(sys/stat.h HAVE_SYS_STAT_H)
-CHECK_INCLUDE_FILES(stdlib.h stddef.h HAVE_STDC_HEADERS)
+CHECK_INCLUDE_FILES("stdlib.h;stddef.h" HAVE_STDC_HEADERS)
 CHECK_INCLUDE_FILE(stdlib.h HAVE_STDLIB_H)
 CHECK_INCLUDE_FILE(string.h HAVE_STRING_H)
 CHECK_INCLUDE_FILE(strings.h HAVE_STRINGS_H)
@@ -287,7 +287,7 @@ foreach(file ${SOURCE_FILES})
 endforeach()
 
 
-add_library(zbar SHARED ${SOURCE_FILES})
+add_library(zbar STATIC ${SOURCE_FILES})
 
 target_link_libraries(zbar ${STATIC_LIBS})
 
