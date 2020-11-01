@@ -119,6 +119,12 @@ if(ANDROID)
   
 endif()
 
+IF (WIN32)
+ include("${CMAKE_CURRENT_SOURCE_DIR}/libiconv-win")
+ set(STATIC_LIBS libiconv libcharset libjpeg)
+ENDIF()
+
+
 include_directories(${INCLUDE_DIRS})
 
 message(STATUS "Include directories:")
