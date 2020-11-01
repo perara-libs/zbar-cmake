@@ -63,7 +63,7 @@ typedef enum zbar_format_group_e {
 struct zbar_image_s {
     uint32_t format;            /* fourcc image format code */
     unsigned width, height;     /* image size */
-    const void *data;           /* image sample data */
+    const char *data;           /* image sample data */
     unsigned long datalen;      /* allocated/mapped size of data */
     void *userdata;             /* user specified data associated w/image */
 

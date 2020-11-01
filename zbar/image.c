@@ -202,7 +202,7 @@ int zbar_image_write (const zbar_image_t *img,
                       const char *filebase)
 {
     int len = strlen(filebase) + 16;
-    char filename[len];
+    char* filename = (char*)malloc(len);
     strcpy(filename, filebase);
     int n = 0;
     if(*(char*)&img->format >= ' ')

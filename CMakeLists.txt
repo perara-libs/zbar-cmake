@@ -7,6 +7,8 @@ folder for building:\nmkdir build; cd build; cmake ..\nBefore that, remove the \
 files already created:\nrm -rf CMakeCache.txt CMakeFiles") 
 endif("${PROJECT_SOURCE_DIR}" STREQUAL "${PROJECT_BINARY_DIR}")
 
+set(CMAKE_C_STANDARD 11)
+
 set(ZBAR_VERSION_MAJOR 0) 
 set(ZBAR_VERSION_MINOR 10)
 
@@ -31,6 +33,8 @@ set(HAVE_XV 0)
 set(INCLUDE_DIRS
   ${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/zbar
+  "${PROJECT_SOURCE_DIR}/zbar/win-include"
+  "${PROJECT_SOURCE_DIR}/zbar/libiconv-win/include"
   )
 
 set(SOURCE_FILES
@@ -61,6 +65,11 @@ set(SOURCE_FILES
   ${PROJECT_SOURCE_DIR}/zbar/decoder.h    
   ${PROJECT_SOURCE_DIR}/zbar/decoder.c
   )
+
+IF (WIN32)
+
+
+ENDIF()
 
 set(EXTRA_SOURCES
   ${PROJECT_SOURCE_DIR}/zbar/svg.h

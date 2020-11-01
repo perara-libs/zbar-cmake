@@ -24,7 +24,18 @@
 #include "window.h"
 #include "image.h"
 #include <time.h>       /* clock_gettime */
+
+
+#ifdef __linux__
 #include <sys/time.h>   /* gettimeofday */
+#elif _WIN32
+
+#else
+
+#endif
+
+
+
 
 zbar_window_t *zbar_window_create ()
 {

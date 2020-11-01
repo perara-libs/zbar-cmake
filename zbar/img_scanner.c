@@ -23,12 +23,25 @@
 
 #include <config.h>
 #include <unistd.h>
+
+
+
 #ifdef HAVE_INTTYPES_H
 # include <inttypes.h>
 #endif
 #include <stdlib.h>     /* malloc, free */
 #include <time.h>       /* clock_gettime */
+
+
+#ifdef __linux__
 #include <sys/time.h>   /* gettimeofday */
+#elif _WIN32
+// TODO
+#else
+
+#endif
+
+
 #include <string.h>     /* memcmp, memset, memcpy */
 #include <assert.h>
 

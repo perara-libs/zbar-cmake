@@ -72,7 +72,7 @@ struct zbar_video_s {
 
     unsigned long datalen;      /* size of image data for selected format */
     unsigned long buflen;       /* total size of image data buffer */
-    void *buf;                  /* image data buffer */
+    char*buf;                  /* image data buffer */
 
     unsigned frame;             /* frame count */
 
