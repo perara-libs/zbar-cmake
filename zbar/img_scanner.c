@@ -31,15 +31,7 @@
 #endif
 #include <stdlib.h>     /* malloc, free */
 #include <time.h>       /* clock_gettime */
-
-
-#ifdef __linux__
 #include <sys/time.h>   /* gettimeofday */
-#elif _WIN32
-// TODO
-#else
-
-#endif
 
 
 #include <string.h>     /* memcmp, memset, memcpy */

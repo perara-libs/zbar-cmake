@@ -24,14 +24,7 @@
 #define _ZBAR_TIMER_H_
 
 #include <time.h>
-
-#ifdef __linux__
 #include <sys/time.h>   /* gettimeofday */
-#elif _WIN32
-
-#else
-
-#endif
 
 
 

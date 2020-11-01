@@ -64,10 +64,14 @@ set(SOURCE_FILES
   ${PROJECT_SOURCE_DIR}/zbar/scanner.c
   ${PROJECT_SOURCE_DIR}/zbar/decoder.h    
   ${PROJECT_SOURCE_DIR}/zbar/decoder.c
+
   )
 
 IF (WIN32)
-
+list(APPEND SOURCE_FILES
+  "${PROJECT_SOURCE_DIR}/zbar/win-include/unistd.h"
+  "${PROJECT_SOURCE_DIR}/zbar/win-include/sys/time.h"
+)
 
 ENDIF()
 
