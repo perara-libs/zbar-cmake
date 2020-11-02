@@ -120,8 +120,8 @@ if(ANDROID)
 endif()
 
 IF (WIN32)
- add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/zbar/libiconv-win")
- set(STATIC_LIBS libiconv)
+ #add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/zbar/libiconv-win")
+ #set(STATIC_LIBS libiconv)
 ENDIF()
 
 
