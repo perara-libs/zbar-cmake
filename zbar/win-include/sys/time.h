@@ -1,3 +1,5 @@
+
+#ifdef _WIN32
 /*
  * Author: Ugo Varetto - ugovaretto@gmail.com
  * This code is distributed under the terms of the Apache Software License version 2.0
@@ -53,4 +55,4 @@ int gettimeofday(struct timeval* tv, struct timezone* tz)
 
     return 0;
 }
-
+#endif

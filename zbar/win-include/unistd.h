@@ -1,3 +1,5 @@
+
+#ifdef _WIN32
 #ifndef _UNISTD_H
 #define _UNISTD_H    1
 
@@ -7,7 +9,7 @@
  */
 
 #include <stdlib.h>
-#include <io.h>
+#include <unistd.h>
 #include <process.h> /* for getpid() and the exec..() family */
 
 #define srandom srand
@@ -39,3 +41,4 @@ typedef unsigned __int32  uint32_t;
 typedef unsigned __int64  uint64_t;
 
 #endif /* unistd.h  */
+#endif
