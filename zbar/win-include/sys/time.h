@@ -6,8 +6,8 @@
  * https://opensource.org/licenses/Apache-2.0
 */
 
-#include < time.h >
-#include < windows.h >
+#include <time.h>
+#include <windows.h>
 
 #if defined(_MSC_VER) || defined(_MSC_EXTENSIONS)
 #define DELTA_EPOCH_IN_MICROSECS  11644473600000000Ui64

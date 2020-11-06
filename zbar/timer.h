@@ -23,8 +23,13 @@
 #ifndef _ZBAR_TIMER_H_
 #define _ZBAR_TIMER_H_
 
-#include <time.h>
+
+#ifdef __unix__
+#include <time.h>       /* clock_gettime */
+#elif _WIN32
 #include <sys/time.h>   /* gettimeofday */
+#endif
+
 
 
 
@@ -71,7 +76,7 @@ static inline int _zbar_timer_check (zbar_timer_t *timer)
 
 #elif defined(_WIN32)
 
-# include <windows.h>
+#include <windows.h>
 
 typedef DWORD zbar_timer_t;
 

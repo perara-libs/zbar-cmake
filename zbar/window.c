@@ -23,8 +23,12 @@
 
 #include "window.h"
 #include "image.h"
+
+#ifdef __unix__
 #include <time.h>       /* clock_gettime */
+#elif _WIN32
 #include <sys/time.h>   /* gettimeofday */
+#endif
 
 
 
