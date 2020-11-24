@@ -1,4 +1,4 @@
-
+#pragma once
 #ifdef _WIN32
 /*
  * Author: Ugo Varetto - ugovaretto@gmail.com
